@@ -1,3 +1,5 @@
+# To run this project, docker-compose -f docker-compose.yml -p exam-container up
+
 # [Web Application Development](https://gitlab.msu.edu/cse477-fall-2024/course-materials/): Final Exam
 
 ## Purpose
