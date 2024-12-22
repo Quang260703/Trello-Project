@@ -1,0 +1,24 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}Boards{% endblock %}
+
+{% block maincontent %}
+{% if data.success %}
+<h1 class="main__title">Boards</h1>
+<div class="main">
+    <!-- Get all boards associated with user  -->
+    {% for idx in range(data.success.id|length) %}
+    <div class="main__column main__column--text" id="{{ data.success.id[idx] }}">
+        <h2 class="main__title">{{ data.success.name[idx] }}</h2>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h1 class="main__title">No board available.</h1>
+{% endif %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='board/js/board.js') }}" defer></script>
+{% endblock %}
+
+{% endblock %}

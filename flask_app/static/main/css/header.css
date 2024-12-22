@@ -1,0 +1,14 @@
+/* BEM Methodology */
+/* Header section with full width and 10% of viewport height */
+.header {
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+}
+
+/* Image that covers the entire header */
+.header__banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

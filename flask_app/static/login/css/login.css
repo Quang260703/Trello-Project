@@ -1,0 +1,78 @@
+/* BEM Methodology */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+
+/* Style for login title */
+.login__title {
+    font-size: 4em;
+    margin-bottom: 1em;
+    color: #333; /* Darker text for better readability */
+}
+
+/* Style for login form */
+.login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjusts width based on screen size */
+    max-width: 25em; /* Prevents form from stretching too wide */
+    border: solid #000;
+    padding: 2em;
+    border-radius: 0.5em; /* Rounded corners */
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for login input */
+.login__input {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border: 0.0125em solid #ccc; /* Light gray border */
+    border-radius: 0.25em;
+    font-size: 1em;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Style for login button */
+.login__button {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF; /* Blue button */
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for login button hovering */
+.login__button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for login error message */
+.login__error {
+    color: #ff0000;
+    display: none;
+    font-size: 1.5em;
+    margin: 1rem;
+}
+
+.login__buttons {
+    display: flex;
+    gap: 1rem; /* Space between the buttons */
+    width: 100%;
+}
+
+/* Media query for screens smaller than 650px */
+@media (max-width: 650px) {
+    .login__buttons {
+        flex-direction: column;  /* Stack the buttons vertically */
+    }
+}

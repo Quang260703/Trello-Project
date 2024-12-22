@@ -1,0 +1,154 @@
+/* BEM methodology */
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    height: 70vh;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.project__container {
+    padding: 2rem;
+}
+
+.project__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.project__column {
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks child elements vertically */
+    gap: 1rem;
+}
+
+.project__column--text {
+    width: 100%;
+    height: 100%;
+    min-width: 20em;
+    align-items: center;
+    display: flex;
+    border: 0.0125em solid #000000; /* Default border */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    padding: 2em;
+}
+
+.project__column--text:hover {
+    border-color: #007BFF; /* Highlight with blue color on hover */
+}
+
+.project__title {
+    margin: 2rem;
+    font-size: 3.5em;
+    text-align: center;
+    min-width: 10em;
+}
+
+.project__name {
+    margin: 2rem;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.project__card {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    border: 0.0125em solid #000000;
+    gap: 1em;
+}
+
+.project__input {
+    width: 100%;
+    padding: 0.75em;
+    border: 0.0125em solid #ccc; /* Light gray border */
+    border-radius: 0.25em;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.project__edit {
+    padding: 0.75em;
+    background-color: #15a3db;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__add {
+    padding: 0.75em;
+    background-color: #18de2c; /* Green button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10em;
+    margin: 2rem;
+}
+
+.project__delete {
+    padding: 0.75em;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__delete::before {
+    content: '\1F5D1'; /* Unicode trash character */
+}
+
+.project__edit:hover {
+    background-color: #162bcf; /* Darker blue on hover */
+}
+
+.project__delete:hover {
+    background-color: #a42222; /* Darker blue on hover */
+}
+
+.project__add:hover {
+    background-color: #1a7e36; /* Darker blue on hover */
+}
+
+.project__chat {
+    width: 100%;
+    height: 21.875em;
+    padding: 0.75em 1.25em;
+    box-sizing: border-box;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    resize: none;
+    overflow-y:auto
+}

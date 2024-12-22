@@ -1,0 +1,120 @@
+/* BEM Methodology */
+.create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+
+/* Style for create title */
+.create__title {
+    font-size: 4em;
+    margin-bottom: 1em;
+    color: #333; /* Darker text for better readability */
+}
+
+/* Style for create form */
+.create__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjusts width based on screen size */
+    max-width: 100em; /* Prevents form from stretching too wide */
+    border: solid #000;
+    padding: 2em;
+    border-radius: 0.5em; /* Rounded corners */
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for create input */
+.create__input {
+    width: 100%;
+    padding: 0.75em;
+    border: 0.0125em solid #ccc; /* Light gray border */
+    border-radius: 0.25em;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.create__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    padding: 0.75em;
+}
+
+.create__button {
+    padding: 0.75em;
+    background-color: #19ce43; /* Green button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create__delete {
+    padding: 0.75em;
+    background-color: #ff0000; /* Green button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem; /* Rounded corners for the button */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create__delete::before {
+    content: '\00d7'; /* Unicode trash character */
+}
+
+.create__button::before {
+    content: '\2713'; /* Unicode checkmark character (✓) */
+}
+
+/* Style for create button */
+.create__submit {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF; /* Blue button */
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for create button hovering */
+.create__button:hover {
+    background-color: #1e931c; /* Darker blue on hover */
+}
+
+.create__delete:hover {
+    background-color: #a42222; /* Darker blue on hover */
+}
+
+/* Style for create error message */
+.create__error {
+    color: #ff0000;
+    display: none;
+    font-size: 1.5em;
+    margin: 1rem;
+}
+
+/* Media query for screens smaller than 650px */
+@media (max-width: 650px) {
+    .create__buttons {
+        flex-direction: column;  /* Stack the buttons vertically */
+    }
+}

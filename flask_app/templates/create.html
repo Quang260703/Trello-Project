@@ -1,0 +1,27 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}Create Board{% endblock %}
+
+{% block maincontent %}
+    <div class="create">
+        <h2 class="create__title">Create Board</h2>
+        <div class="create__error"></div>
+        <!-- create Form -->
+        <form action="/processcreate" method="POST" class="create__form" id="createForm">
+            <!-- Name Input -->
+            <input type="text" name="name" class="create__input" placeholder="Your Project Name" required title="Please enter your project name">
+            <div id="memberEmailContainer"></div>
+            <div class="create__container" id="addEmailContainer">
+            <!-- Email Input -->
+                <input type="email" name="email" id="emailInput" class="create__input" placeholder="Enter member email then click add" title="Please enter member email">
+                <button type="button" name="add" id="addButton" class="create__button"></button>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" name="create" class="create__submit">create</button>
+        </form>
+    </div>
+
+    {% block extrajs %}
+    <script src="{{ url_for('static', filename='create/js/create.js') }}" defer></script>
+    {% endblock %}
+{% endblock %}

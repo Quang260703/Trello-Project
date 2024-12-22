@@ -1,0 +1,21 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block maincontent %}
+<div class="main">
+  <!-- Open existing boards -->
+  <div class="main__column main__column--text" id="open">
+      <h2 class="main__title">Open existing boards</h2>
+  </div>
+  <!-- Create a new board -->
+  <div class="main__column main__column--text" id="create">
+      <h2 class="main__title">Create a new board</h2>
+  </div>
+</div>
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='main/js/home.js') }}" defer></script>
+{% endblock %}
+
+{% endblock %}

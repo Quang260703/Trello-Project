@@ -1,0 +1,30 @@
+{% extends 'shared/layout.html' %}
+
+{% block title %}Login And Sign Up{% endblock %}
+
+{% block maincontent %}
+    <div class="login">
+        <h2 class="login__title">Login</h2>
+        
+        <!-- Login Form -->
+        <form action="/processlogin" method="POST" class="login__form" id="searchForm">
+            <!-- Email Input -->
+            <input type="email" name="email" class="login__input" placeholder="Your Email" required title="Please enter your email address">
+            <!-- Password Input -->
+            <input type="password" name="password" class="login__input" placeholder="Your Password" required title="Please enter your password">
+            <!-- Submit Button -->
+            <div class="login__buttons">
+                <button type="submit" name="login" class="login__button">Login</button>
+                <button type="submit" name="sign_up" class="login__button">Sign Up</button>
+            </div>
+        </form>
+
+        <div class="login__error"></div>
+    </div>
+
+    {% block extrajs %}
+    <script src="{{ url_for('static', filename='login/js/login.js') }}" defer></script>
+    {% endblock %}
+{% endblock %}
+
+
